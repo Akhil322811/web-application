@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                        <input type="text" placeholder="name">
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="type mail">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="type password">
+                    </div>
+
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signUpbtn">Sign up</button>
+                    <button type="button" class="disable" id="signInbtn">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let signUpbtn = document.getElementById("signUpbtn");
+        let signInbtn = document.getElementById("signInbtn");
+        let namefield = document.getElementById("namefield");
+        let title = document.getElementById("title");
+
+
+
+        signUpbtn.onclick = function () {
+            namefield.style.maxHeight = "60px";
+            title.innerHTML = "Sign up";
+            signInbtn.classList.remove("disable");
+            signupbtn.classList.add("disable")
+        }
+        signInbtn.onclick = function () {
+            namefield.style.maxHeight = "0";
+            title.innerHTML = "Sign in";
+            signInbtn.classList.add("disable");
+            signupbtn.classList.remove("disable")
+        }
+    </script>
+</body>
+
+</html>
